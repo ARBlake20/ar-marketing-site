@@ -57,3 +57,14 @@ export default function Home() {
     </main>
   );
 }
+
+{/* Client Logos */}
+<section className="py-20 px-8 bg-white text-center">
+  <h2 className="text-3xl font-bold mb-10">Trusted by Brands Like</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center max-w-5xl mx-auto">
+    <img src="/logos/neimans.png" alt="Neiman's" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+    <img src="/logos/clarks.png" alt="Clark's Ranch Market" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+    <img src="/logos/streamlife.png" alt="Stream Life" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+    <img src="/logos/ithaca.png" alt="Ithaca Gun Co" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+  </div>
+</section>
