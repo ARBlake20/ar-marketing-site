@@ -54,17 +54,49 @@ export default function Home() {
           Book a Call
         </a>
       </section>
+
+{/* Case Studies */}
+<section className="py-20 px-8 bg-slate-50">
+  <h2 className="text-3xl font-bold text-center mb-12">Featured Work</h2>
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {[
+            {
+              title: 'Ithaca Gun Co.',
+              desc: 'Reimagined the brand as a luxury outdoor lifestyle company through visual identity and storytelling.',
+              img: '/case-studies/ithaca.jpg'
+            },
+            {
+              title: 'Stream Life',
+              desc: 'Developed a nature-forward apparel brand with a focus on preservation and peaceful outdoor culture.',
+              img: '/case-studies/streamlife.jpg'
+            },
+            {
+              title: 'Neiman’s Grocery',
+              desc: 'Ongoing social media strategy and content creation to grow foot traffic and brand loyalty.',
+              img: '/case-studies/neimans.jpg'
+            },
+          ].map((caseStudy, i) => (
+            <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+              <img src={caseStudy.img} alt={caseStudy.title} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{caseStudy.title}</h3>
+                <p className="text-slate-700">{caseStudy.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Client Logos */}
+<section className="py-20 px-8 bg-white text-center">
+  <h2 className="text-3xl font-bold mb-10">Trusted by Brands Like</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center max-w-5xl mx-auto">
+          <img src="/logos/neimans.png" alt="Neiman's" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/logos/clarks.png" alt="Clark's Ranch Market" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/logos/streamlife.png" alt="Stream Life" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+          <img src="/logos/ithaca.png" alt="Ithaca Gun Co" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
+        </div>
+      </section>
     </main>
   );
 }
-
-{/* Client Logos */}
-<section className="py-20 px-8 bg-white text-center">
-  <h2 className="text-3xl font-bold mb-10">Trusted by Brands Like</h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center max-w-5xl mx-auto">
-    <img src="/logos/neimans.png" alt="Neiman's" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
-    <img src="/logos/clarks.png" alt="Clark's Ranch Market" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
-    <img src="/logos/streamlife.png" alt="Stream Life" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
-    <img src="/logos/ithaca.png" alt="Ithaca Gun Co" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
-  </div>
-</section>
