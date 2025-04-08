@@ -5,15 +5,15 @@ export default function Home() {
 
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark");
+      document.querySelector("html")?.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.querySelector("html")?.classList.remove("dark");
     }
   }, [isDarkMode]);
 
   return (
     <main className="transition-colors duration-500">
-      <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-500">
+      <div className="min-h-screen transition-colors duration-500 bg-white text-slate-900 dark:bg-slate-900 dark:text-white">
       {/* Sticky Navigation */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
