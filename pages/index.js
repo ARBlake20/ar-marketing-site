@@ -12,13 +12,13 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <main className="transition-colors duration-500">
+    <main className="bg-white text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-500">
       <div className="min-h-screen transition-colors duration-500 bg-white text-slate-900 dark:bg-slate-900 dark:text-white">
       {/* Sticky Navigation */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <a href="#" className="text-2xl font-bold text-blue-700">AR Marketing</a>
-          <nav className="hidden md:flex space-x-6 text-sm font-medium text-slate-800">
+          <nav className="hidden md:flex space-x-6 text-sm font-medium text-slate-800 dark:text-slate-300">
             <a href="#" className="hover:text-blue-700 transition">Home</a>
             <a href="#services" className="hover:text-blue-700 transition">What We Do</a>
             <a href="#case-studies" className="hover:text-blue-700 transition">Featured Work</a>
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
         </div>
         {/* Mobile Nav - Hidden by Default */}
-        <div id="mobile-menu" className="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium text-slate-800 bg-white border-t border-slate-200">
+        <div id="mobile-menu" className="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium text-slate-800 dark:text-slate-300 bg-white border-t border-slate-200">
           <a href="#" className="block hover:text-blue-700 transition">Home</a>
           <a href="#services" className="block hover:text-blue-700 transition">What We Do</a>
           <a href="#case-studies" className="block hover:text-blue-700 transition">Featured Work</a>
@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-8 bg-white dark:bg-slate-800" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+      <section id="services" className="py-20 px-8 bg-white text-slate-900 dark:bg-slate-800 dark:text-white" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What We Do</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
@@ -85,8 +85,8 @@ export default function Home() {
             },
           ].map((service, i) => (
             <div key={i} className="p-6 border border-slate-200 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100" data-aos-delay={i * 100}>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-slate-700">{service.desc}</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{service.title}</h3>
+              <p className="text-slate-700 dark:text-slate-300">{service.desc}</p>
             </div>
           ))}
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-8 text-center bg-slate-100 dark:bg-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h2 className="text-3xl font-bold mb-4">Ready to grow your business?</h2>
-        <p className="mb-8 max-w-xl mx-auto text-lg">
+        <p className="mb-8 max-w-xl mx-auto text-lg dark:text-white">
           Schedule a consultation with our team and find out how AR Marketing can help you stand out.
         </p>
         <a
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
 {/* Case Studies */}
-<section id="case-studies" className="py-20 px-8 bg-slate-50 dark:bg-slate-800" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section id="case-studies" className="py-20 px-8 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold text-center mb-12">Featured Work</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
@@ -130,8 +130,8 @@ export default function Home() {
             <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100" data-aos-delay={i * 100}>
               <img src={caseStudy.img} alt={caseStudy.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{caseStudy.title}</h3>
-                <p className="text-slate-700">{caseStudy.desc}</p>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{caseStudy.title}</h3>
+                <p className="text-slate-700 dark:text-slate-300">{caseStudy.desc}</p>
               </div>
             </div>
           ))}
@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* Client Logos */}
 <section className="py-20 px-8 bg-white dark:bg-slate-900 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
-  <h2 className="text-3xl font-bold mb-10">Trusted by Brands Like</h2>
+  <h2 className="text-3xl font-bold mb-10 text-slate-900 dark:text-white">Trusted by Brands Like</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center max-w-5xl mx-auto">
           <img src="/logos/neimans.png" alt="Neiman's" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
           <img src="/logos/clarks.png" alt="Clark's Ranch Market" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
@@ -151,7 +151,7 @@ export default function Home() {
 
 {/* Team Section */}
 <section id="team" className="py-20 px-8 bg-slate-100 dark:bg-slate-800 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
-  <h2 className="text-3xl font-bold mb-12">Meet the AR Team</h2>
+  <h2 className="text-3xl font-bold mb-12 text-slate-900 dark:text-white">Meet the AR Team</h2>
   <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
     {[
       {
@@ -186,9 +186,9 @@ export default function Home() {
       },
     ].map((member, i) => (
       <div key={i} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100" data-aos-delay={i * 100}>
-        <h3 className="text-xl font-semibold">{member.name}</h3>
-        <p className="text-blue-700 font-medium mb-2">{member.title}</p>
-        <a href={`mailto:${member.email}`} className="text-slate-700 hover:text-blue-700 underline">{member.email}</a>
+        <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{member.name}</h3>
+        <p className="text-blue-700 dark:text-blue-300 font-medium mb-2">{member.title}</p>
+        <a href={`mailto:${member.email}`} className="text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-400 underline">{member.email}</a>
       </div>
     ))}
   </div>
@@ -196,30 +196,30 @@ export default function Home() {
 
       {/* Contact Section */}
 <section id="contact" className="py-20 px-8 bg-white dark:bg-slate-900 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
-  <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
-  <p className="text-lg mb-12 max-w-xl mx-auto">
+  <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Let’s Talk</h2>
+  <p className="text-lg mb-12 max-w-xl mx-auto dark:text-white">
     Ready to take your marketing to the next level? Reach out and let’s start the conversation.
   </p>
 
   <form className="max-w-2xl mx-auto text-left space-y-6">
     <div>
-      <label htmlFor="name" className="block font-medium text-slate-800 mb-1">Name</label>
-      <input type="text" id="name" name="name" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <label htmlFor="name" className="block font-medium text-slate-800 dark:text-slate-300 mb-1">Name</label>
+      <input type="text" id="name" name="name" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-slate-900 dark:text-white" />
     </div>
     <div>
-      <label htmlFor="email" className="block font-medium text-slate-800 mb-1">Email</label>
-      <input type="email" id="email" name="email" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <label htmlFor="email" className="block font-medium text-slate-800 dark:text-slate-300 mb-1">Email</label>
+      <input type="email" id="email" name="email" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-slate-900 dark:text-white" />
     </div>
     <div>
-      <label htmlFor="message" className="block font-medium text-slate-800 mb-1">Message</label>
-      <textarea id="message" name="message" rows="5" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      <label htmlFor="message" className="block font-medium text-slate-800 dark:text-slate-300 mb-1">Message</label>
+      <textarea id="message" name="message" rows="5" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-slate-900 dark:text-white"></textarea>
     </div>
     <button type="submit" className="bg-blue-700 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-800 transition w-full sm:w-auto">
       Send Message
     </button>
   </form>
 
-  <div className="mt-12 text-slate-700">
+  <div className="mt-12 text-slate-700 dark:text-slate-300">
     <p className="mb-1"><strong>Phone:</strong> <a href="tel:4194272772" className="text-blue-700 hover:underline">419-427-2772</a></p>
     <p><strong>Email:</strong> <a href="mailto:Blake@a-rmarketing.com" className="text-blue-700 hover:underline">Blake@a-rmarketing.com</a></p>
   </div>
