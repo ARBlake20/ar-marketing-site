@@ -1,5 +1,5 @@
+import { useState, useEffect } from "react";
 export default function Home() {
-  import { useState, useEffect } from "react";
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
