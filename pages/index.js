@@ -97,6 +97,53 @@ export default function Home() {
           <img src="/logos/ithaca.png" alt="Ithaca Gun Co" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
         </div>
       </section>
+
+{/* Team Section */}
+<section className="py-20 px-8 bg-slate-100 text-center">
+  <h2 className="text-3xl font-bold mb-12">Meet the AR Team</h2>
+  <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
+    {[
+      {
+        name: 'Eric Anderson',
+        title: 'Principal, Founder',
+        email: 'eric@a-rmarketing.com'
+      },
+      {
+        name: 'Julie Anderson',
+        title: 'Principal, Founder',
+        email: 'julie@a-rmarketing.com'
+      },
+      {
+        name: 'Stephanie Neitz',
+        title: 'President',
+        email: 'stephanie@a-rmarketing.com'
+      },
+      {
+        name: 'Lindsay Ginter',
+        title: 'Vice President, Digital Strategy',
+        email: 'lindsay@a-rmarketing.com'
+      },
+      {
+        name: 'Blake Martin',
+        title: 'Creative Director',
+        email: 'blake@a-rmarketing.com'
+      },
+      {
+        name: 'Kristen Hooper',
+        title: 'Director of Strategy & Planning',
+        email: 'kristen@a-rmarketing.com'
+      },
+    ].map((member, i) => (
+      <div key={i} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 className="text-xl font-semibold">{member.name}</h3>
+        <p className="text-blue-700 font-medium mb-2">{member.title}</p>
+        <a href={`mailto:${member.email}`} className="text-slate-700 hover:text-blue-700 underline">{member.email}</a>
+      </div>
+    ))}
+  </div>
+</section>
+
     </main>
   );
 }
+// Force push: Add team section v3
