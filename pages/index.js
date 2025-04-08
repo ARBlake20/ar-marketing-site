@@ -1,6 +1,52 @@
 export default function Home() {
+  import { useState, useEffect } from "react";
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+  }, [isDarkMode]);
+
   return (
-    <main className="bg-white text-slate-900">
+    <main className={`transition-colors duration-500 ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-white text-slate-900'}`}>
+      {/* Sticky Navigation */}
+      <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          <a href="#" className="text-2xl font-bold text-blue-700">AR Marketing</a>
+          <nav className="hidden md:flex space-x-6 text-sm font-medium text-slate-800">
+            <a href="#" className="hover:text-blue-700 transition">Home</a>
+            <a href="#services" className="hover:text-blue-700 transition">What We Do</a>
+            <a href="#case-studies" className="hover:text-blue-700 transition">Featured Work</a>
+            <a href="#team" className="hover:text-blue-700 transition">Team</a>
+            <a href="#contact" className="hover:text-blue-700 transition">Contact</a>
+          </nav>
+          {/* Dark Mode Toggle */}
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="ml-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm hidden md:inline-block"
+            aria-label="Toggle Dark Mode"
+          >
+            {isDarkMode ? "☀️ Light" : "🌙 Dark"}
+          </button>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button id="menu-toggle" className="focus:outline-none">
+              <svg className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        {/* Mobile Nav - Hidden by Default */}
+        <div id="mobile-menu" className="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium text-slate-800 bg-white border-t border-slate-200">
+          <a href="#" className="block hover:text-blue-700 transition">Home</a>
+          <a href="#services" className="block hover:text-blue-700 transition">What We Do</a>
+          <a href="#case-studies" className="block hover:text-blue-700 transition">Featured Work</a>
+          <a href="#team" className="block hover:text-blue-700 transition">Team</a>
+          <a href="#contact" className="block hover:text-blue-700 transition">Contact</a>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center flex-col text-center p-8 bg-gradient-to-br from-blue-100 to-cyan-100" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Marketing That Actually Works</h1>
@@ -16,7 +62,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-8 bg-white" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+      <section id="services" className="py-20 px-8 bg-white" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What We Do</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
@@ -56,7 +102,7 @@ export default function Home() {
       </section>
 
 {/* Case Studies */}
-<section className="py-20 px-8 bg-slate-50" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section id="case-studies" className="py-20 px-8 bg-slate-50" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold text-center mb-12">Featured Work</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
@@ -99,7 +145,7 @@ export default function Home() {
       </section>
 
 {/* Team Section */}
-<section className="py-20 px-8 bg-slate-100 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section id="team" className="py-20 px-8 bg-slate-100 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold mb-12">Meet the AR Team</h2>
   <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
     {[
@@ -174,6 +220,50 @@ export default function Home() {
   </div>
 </section>
 
+{/* Footer */}
+<footer className="bg-slate-900 text-white py-12 px-8">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 text-center md:text-left">
+    {/* Brand Column */}
+    <div>
+      <h3 className="text-xl font-semibold mb-4">AR Marketing</h3>
+      <p className="text-slate-400">Smart, strategic marketing for grocery retailers, marinas, and trade associations.</p>
+    </div>
+
+    {/* Quick Links */}
+    <div>
+      <h4 className="text-lg font-medium mb-4">Quick Links</h4>
+      <ul className="space-y-2">
+        <li><a href="#" className="text-slate-300 hover:text-white transition">Home</a></li>
+        <li><a href="#services" className="text-slate-300 hover:text-white transition">What We Do</a></li>
+        <li><a href="#case-studies" className="text-slate-300 hover:text-white transition">Featured Work</a></li>
+        <li><a href="#team" className="text-slate-300 hover:text-white transition">Team</a></li>
+        <li><a href="#contact" className="text-slate-300 hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div>
+      <h4 className="text-lg font-medium mb-4">Contact</h4>
+      <p className="text-slate-300">Phone: <a href="tel:4194272772" className="hover:underline text-white">419-427-2772</a></p>
+      <p className="text-slate-300">Email: <a href="mailto:Blake@a-rmarketing.com" className="hover:underline text-white">Blake@a-rmarketing.com</a></p>
+      <p className="text-slate-500 mt-6 text-sm">© {new Date().getFullYear()} AR Marketing. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
     </main>
   );
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
 }
