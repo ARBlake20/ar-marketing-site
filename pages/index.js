@@ -53,7 +53,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center flex-col text-center p-8 bg-gradient-to-br from-blue-100 to-cyan-100" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+      <section className="min-h-screen flex items-center justify-center flex-col text-center p-8 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-slate-800 dark:to-slate-900" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Marketing That Actually Works</h1>
         <p className="text-xl md:text-2xl max-w-2xl mb-8">
           AR Marketing helps grocery retailers, marinas, and trade associations grow with smart, strategic marketing.
@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-8 bg-white" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+      <section id="services" className="py-20 px-8 bg-white dark:bg-slate-800" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What We Do</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-8 text-center bg-slate-100" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+      <section className="py-20 px-8 text-center bg-slate-100 dark:bg-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
         <h2 className="text-3xl font-bold mb-4">Ready to grow your business?</h2>
         <p className="mb-8 max-w-xl mx-auto text-lg">
           Schedule a consultation with our team and find out how AR Marketing can help you stand out.
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
 {/* Case Studies */}
-<section id="case-studies" className="py-20 px-8 bg-slate-50" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section id="case-studies" className="py-20 px-8 bg-slate-50 dark:bg-slate-800" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold text-center mb-12">Featured Work</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Client Logos */}
-<section className="py-20 px-8 bg-white text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section className="py-20 px-8 bg-white dark:bg-slate-900 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold mb-10">Trusted by Brands Like</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center max-w-5xl mx-auto">
           <img src="/logos/neimans.png" alt="Neiman's" className="max-h-12 mx-auto grayscale hover:grayscale-0 transition" />
@@ -150,7 +150,7 @@ export default function Home() {
       </section>
 
 {/* Team Section */}
-<section id="team" className="py-20 px-8 bg-slate-100 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section id="team" className="py-20 px-8 bg-slate-100 dark:bg-slate-800 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold mb-12">Meet the AR Team</h2>
   <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
     {[
@@ -195,7 +195,7 @@ export default function Home() {
 </section>
 
       {/* Contact Section */}
-<section id="contact" className="py-20 px-8 bg-white text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+<section id="contact" className="py-20 px-8 bg-white dark:bg-slate-900 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-offset="100">
   <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
   <p className="text-lg mb-12 max-w-xl mx-auto">
     Ready to take your marketing to the next level? Reach out and let’s start the conversation.
