@@ -8,7 +8,8 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <main className={`transition-colors duration-500 ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-white text-slate-900'}`}>
+    <main className={`transition-colors duration-500 ${isDarkMode ? 'dark' : ''}`}>
+      <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-500">
       {/* Sticky Navigation */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -250,7 +251,7 @@ export default function Home() {
     </div>
   </div>
 </footer>
-
+      </div>
     </main>
   );
 }
