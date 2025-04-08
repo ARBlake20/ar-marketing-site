@@ -143,6 +143,37 @@ export default function Home() {
   </div>
 </section>
 
+      {/* Contact Section */}
+<section id="contact" className="py-20 px-8 bg-white text-center" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-easing="ease-out-cubic" data-aos-offset="100">
+  <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
+  <p className="text-lg mb-12 max-w-xl mx-auto">
+    Ready to take your marketing to the next level? Reach out and let’s start the conversation.
+  </p>
+
+  <form className="max-w-2xl mx-auto text-left space-y-6">
+    <div>
+      <label htmlFor="name" className="block font-medium text-slate-800 mb-1">Name</label>
+      <input type="text" id="name" name="name" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+    <div>
+      <label htmlFor="email" className="block font-medium text-slate-800 mb-1">Email</label>
+      <input type="email" id="email" name="email" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+    <div>
+      <label htmlFor="message" className="block font-medium text-slate-800 mb-1">Message</label>
+      <textarea id="message" name="message" rows="5" required className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+    </div>
+    <button type="submit" className="bg-blue-700 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-800 transition w-full sm:w-auto">
+      Send Message
+    </button>
+  </form>
+
+  <div className="mt-12 text-slate-700">
+    <p className="mb-1"><strong>Phone:</strong> <a href="tel:4194272772" className="text-blue-700 hover:underline">419-427-2772</a></p>
+    <p><strong>Email:</strong> <a href="mailto:Blake@a-rmarketing.com" className="text-blue-700 hover:underline">Blake@a-rmarketing.com</a></p>
+  </div>
+</section>
+
     </main>
   );
 }
